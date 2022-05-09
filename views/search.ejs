@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/style4.css">
+    <title>SEARCH BOOK</title>
+   
+    
+</head>
+
+<body>
+    <div class="loginbox"></div>
+    <h1>SEARCH BOOK</h1>
+       <form  id="search" action="/search" method="POST"  role="form" enctype="multipart/form-data">
+              
+         <b> <p>Book_number:</p>
+         <input type="text" name="bid" >
+         </b>
+         <br>
+          <input type="submit" name="Search" value="Search">
+             <input type="reset" name="Cancel" value="Cancel">
+        </form>
+    </div>
+    <div id="add_test_details" class="details">
+        <div class="container-lg">
+          <div class="table-responsive">    
+              <div class="table-wrapper">
+                  <div class="table-title">
+                      <div class="row">
+                          <div class="col-sm-8"></div>
+                      </div>
+                  </div>
+                  <table class="table table-bordered">
+                      <thead>
+                          <tr>
+                              <th>Book Id</th>
+                              <th>Book name </th>
+                              <th>Author name</th>
+                              <th>Copies</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <% records.forEach(function(row){%>
+                          <tr>
+                            <td><%= row.Book_number%></td>
+                            <td><%= row.Book_name%></td>
+                            <td><%= row.Author_name%></td>
+                            <td><%= row.Copies%></td>
+                          </tr> 
+                          <%}) %>
+                      </tbody>
+                  </table>
+              </div>
+            </div>
+        </div>
+    </div>
+         
+</body>
+</html>

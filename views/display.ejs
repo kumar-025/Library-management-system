@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/style4.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Display PAGE</title>
+   
+    
+</head>
+
+<body>
+    <h1>DISPLAY PAGE</h1>
+<div id="add_test_details" class="details">
+    <div class="container-lg">
+      <div class="table-responsive">    
+          <div class="table-wrapper">
+              <div class="table-title">
+                  <div class="row">
+                      <div class="col-sm-8"></div>
+                  </div>
+              </div>
+              <table class="table table-bordered">
+                  <thead>
+                      <tr>
+                          <th>Book Id</th>
+                          <th>Book name </th>
+                          <th>Author name</th>
+                          <th>Copies</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <% records.forEach(function(row){%>
+                      <tr>
+                        <td><%= row.Book_number%></td>
+                        <td><%= row.Book_name%></td>
+                        <td><%= row.Author_name%></td>
+                        <td><%= row.Copies%></td>  
+                      </tr> 
+                      <%}) %>
+                  </tbody>
+              </table>
+          </div>
+        </div>
+    </div>
+</div>
+     
+</body>
+</html>
